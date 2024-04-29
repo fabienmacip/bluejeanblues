@@ -78,6 +78,18 @@ audio {
   padding: 0 1rem;
 }
 
+#playlist-onpage {
+  text-align: center;
+}
+
+iframe {
+  max-width: 600px;
+}
+
+.red-class {
+  border: 3px solid red !important;
+}
+
 @media (max-width: 732px) {
   .song-mp3 {
     flex-direction: column !important;
