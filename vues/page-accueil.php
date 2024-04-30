@@ -168,7 +168,7 @@
   $song15->tonaliteBJB = "E";
   $song15->linkMP3 = "Sympathy_for_the_devil_live";
   $song15->linkMP3BJB = "";
-  $song15->linkLyrics = "";
+  $song15->linkLyrics = "Sympathy_for_the_devil";
 
   $song16 = new Song();
   $song16->title = "Twist and shout";
@@ -178,7 +178,7 @@
   $song16->tonaliteBJB = "A";
   $song16->linkMP3 = "";
   $song16->linkMP3BJB = "";
-  $song16->linkLyrics = "";
+  $song16->linkLyrics = "Twist_and_shout";
 
   $song17 = new Song();
   $song17->title = "Wild horses";
@@ -188,7 +188,7 @@
   $song17->tonaliteBJB = "Bm";
   $song17->linkMP3 = "Wild_horses";
   $song17->linkMP3BJB = "";
-  $song17->linkLyrics = "";
+  $song17->linkLyrics = "Wild_horses";
 
   $song18 = new Song();
   $song18->title = "You never can tell";
@@ -197,8 +197,8 @@
   $song18->tonalite = "C";
   $song18->tonaliteBJB = "A";
   $song18->linkMP3 = "You_never_can_tell";
-  $song18->linkMP3BJB = "";
-  $song18->linkLyrics = "";
+  $song18->linkMP3BJB = "You_never_can_tell-3";
+  $song18->linkLyrics = "You_never_can_tell";
 
 
   $songs = [$song1, $song2, $song3, $song4, $song5, $song6, $song7, $song8, $song9, $song10, $song11, $song12, $song13, $song14, $song15, $song16, $song17, $song18];
@@ -213,16 +213,11 @@
 <div id="songs-list" class="py-40 flex flex-column">
 
 <?php 
-  $i = 0;
-  foreach($songs as $song) { 
-  $i++;
-  $redClass = $i < 15 ? "" : " red-class";
 
-  if($i === 15) {
-    echo "<p class='tc bg-red'>A partir d'ici, cartes des chansons (mp3 et paroles) &agrave; terminer...</p>";
-  }
+  foreach($songs as $song) { 
+
 ?>
-  <div class="song-card<?= $redClass ?>">
+  <div class="song-card">
       <div class="song-title tc h6"><?= strtoupper($song->title) ?> - <?= $song->singer ?></div>
       <div class="song-infos flex flex-row jcsb">
         <div>BPM : <?= $song->bpm ?></div>
